@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimas\\Documents\\Kerjaan\\Freelance\\Irwan\\Encrypt Me\\Encrypt Me\\Encrypt Me.csproj",
+      "projectUniqueName": "C:\\Users\\dimas\\Documents\\Kerjaan\\Freelance\\Encrypt Mee\\encrypt-me\\Encrypt Me.csproj",
       "projectName": "Encrypt Me",
-      "projectPath": "C:\\Users\\dimas\\Documents\\Kerjaan\\Freelance\\Irwan\\Encrypt Me\\Encrypt Me\\Encrypt Me.csproj",
+      "projectPath": "C:\\Users\\dimas\\Documents\\Kerjaan\\Freelance\\Encrypt Mee\\encrypt-me\\Encrypt Me.csproj",
       "packagesPath": "C:\\Users\\dimas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimas\\Documents\\Kerjaan\\Freelance\\Irwan\\Encrypt Me\\Encrypt Me\\obj\\",
+      "outputPath": "C:\\Users\\dimas\\Documents\\Kerjaan\\Freelance\\Encrypt Mee\\encrypt-me\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

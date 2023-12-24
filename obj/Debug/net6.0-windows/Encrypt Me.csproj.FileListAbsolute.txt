@@ -15,3 +15,24 @@ C:\Users\dimas\Documents\Kerjaan\Freelance\Irwan\Encrypt Me\Encrypt Me\obj\Debug
 C:\Users\dimas\Documents\Kerjaan\Freelance\Irwan\Encrypt Me\Encrypt Me\obj\Debug\net6.0-windows\ref\Encrypt Me.dll
 C:\Users\dimas\Documents\Kerjaan\Freelance\Irwan\Encrypt Me\Encrypt Me\obj\Debug\net6.0-windows\Encrypt_Me.EncryptMe.resources
 C:\Users\dimas\Documents\Kerjaan\Freelance\Irwan\Encrypt Me\Encrypt Me\obj\Debug\net6.0-windows\Encrypt_Me.Properties.Resources.resources
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\bin\Debug\net6.0-windows\Encrypt Me.exe
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\bin\Debug\net6.0-windows\Encrypt Me.deps.json
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\bin\Debug\net6.0-windows\Encrypt Me.runtimeconfig.json
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\bin\Debug\net6.0-windows\Encrypt Me.dll
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\bin\Debug\net6.0-windows\Encrypt Me.pdb
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.EncryptMe.resources
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.Properties.Resources.resources
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.csproj.GenerateResource.cache
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.AssemblyInfoInputs.cache
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.AssemblyInfo.cs
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.csproj.CoreCompileInputs.cache
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.sourcelink.json
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.dll
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\refint\Encrypt Me.dll
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.pdb
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.genruntimeconfig.cache
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\ref\Encrypt Me.dll
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.home.resources
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.Encrypt.resources
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.UserManagement.resources

@@ -1,40 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Encrypt_Me
 {
-    public partial class EncryptMe : Form
+    public partial class UserManagement : Form
     {
-        public EncryptMe()
+        public UserManagement()
         {
-            InitializeComponent(); 
-        }
+            InitializeComponent();
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            RoundButton(btnEncryptModule);
-            RoundButton(btnUserManagement);
-            RoundButton(btnTestLogin);
-
-            btnEncryptModule.Padding = new Padding(40);
-            btnUserManagement.Padding = new Padding(10, 40, 10, 20);
-            btnTestLogin.Padding = new Padding(40);
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+            RoundButton(btn_add);
+            RoundButton(btn_update);
+            RoundButton(btn_delete);
+        } 
 
         private void RoundButton(Button btn)
-        { 
-            btn.Cursor = Cursors.Hand; 
+        {
+            btn.Cursor = Cursors.Hand;
             GraphicsPath radius = new GraphicsPath();
 
             radius.StartFigure();
@@ -61,10 +51,7 @@ namespace Encrypt_Me
             // Set the window associated with the control
             btn.Region = new Region(radius);
         }
-
-
     }
-
 
 
 }
