@@ -1,4 +1,6 @@
-﻿ 
+﻿
+using Encrypt_Me.model;
+using Encrypt_Me.services;
 using System.Drawing.Drawing2D; 
 
 namespace Encrypt_Me
@@ -44,10 +46,18 @@ namespace Encrypt_Me
             // Set the window associated with the control
             btn.Region = new Region(radius);
         }
+         
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnTestLogin_Click(object sender, EventArgs e)
         {
-
+            string text = txt_text.Text;
+            string secretKey = txt_secretKey.Text;
+            EncryptionService service = new EncryptionService();
+            ResultModel result = service.encryptToSHA256(text, secretKey);  
+            txt_bytesOfUtf8.Text = result.getUTF8Bytes();
+            txt_encryptionInBytes.Text = result.getHashedInBytes();
+            txt_encrypt.Text = result.getHashedString();
+            txt_result.Text = result.getResult();
         }
     }
 }

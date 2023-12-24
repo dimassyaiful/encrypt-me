@@ -34,17 +34,21 @@
             label2 = new Label();
             label3 = new Label();
             btnTestLogin = new Button();
-            txt_utf8 = new TextBox();
             label4 = new Label();
             label5 = new Label();
             txt_encrypt = new TextBox();
+            label6 = new Label();
+            txt_encryptionInBytes = new TextBox();
+            txt_bytesOfUtf8 = new TextBox();
+            txt_result = new TextBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // txt_text
             // 
             txt_text.BorderStyle = BorderStyle.FixedSingle;
             txt_text.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_text.Location = new Point(62, 203);
+            txt_text.Location = new Point(62, 161);
             txt_text.Name = "txt_text";
             txt_text.Size = new Size(343, 45);
             txt_text.TabIndex = 0;
@@ -53,7 +57,7 @@
             // 
             txt_secretKey.BorderStyle = BorderStyle.FixedSingle;
             txt_secretKey.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_secretKey.Location = new Point(426, 202);
+            txt_secretKey.Location = new Point(426, 160);
             txt_secretKey.Name = "txt_secretKey";
             txt_secretKey.Size = new Size(400, 45);
             txt_secretKey.TabIndex = 1;
@@ -61,20 +65,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(62, 161);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(62, 119);
             label1.Name = "label1";
-            label1.Size = new Size(125, 32);
+            label1.Size = new Size(131, 32);
             label1.TabIndex = 2;
             label1.Text = "Some Text";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(426, 160);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(426, 118);
             label2.Name = "label2";
-            label2.Size = new Size(126, 32);
+            label2.Size = new Size(133, 32);
             label2.TabIndex = 3;
             label2.Text = "Secret Key";
             // 
@@ -82,7 +86,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(61, 42);
+            label3.Location = new Point(52, 23);
             label3.Name = "label3";
             label3.Size = new Size(194, 65);
             label3.TabIndex = 4;
@@ -98,65 +102,109 @@
             btnTestLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnTestLogin.ForeColor = Color.White;
             btnTestLogin.ImageAlign = ContentAlignment.TopCenter;
-            btnTestLogin.Location = new Point(846, 203);
+            btnTestLogin.Location = new Point(846, 161);
             btnTestLogin.Name = "btnTestLogin";
             btnTestLogin.Size = new Size(173, 45);
             btnTestLogin.TabIndex = 10;
             btnTestLogin.Text = "Encrypt";
             btnTestLogin.UseVisualStyleBackColor = false;
-            // 
-            // txt_utf8
-            // 
-            txt_utf8.BorderStyle = BorderStyle.FixedSingle;
-            txt_utf8.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_utf8.Location = new Point(62, 351);
-            txt_utf8.Multiline = true;
-            txt_utf8.Name = "txt_utf8";
-            txt_utf8.Size = new Size(957, 190);
-            txt_utf8.TabIndex = 11;
+            btnTestLogin.Click += btnTestLogin_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(62, 303);
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(61, 237);
             label4.Name = "label4";
-            label4.Size = new Size(139, 32);
+            label4.Size = new Size(296, 32);
             label4.TabIndex = 12;
-            label4.Text = "UTF 8 Bytes";
-            label4.Click += label4_Click;
+            label4.Text = "UTF8 Converted to Bytes";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(61, 582);
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(62, 534);
             label5.Name = "label5";
-            label5.Size = new Size(198, 32);
+            label5.Size = new Size(286, 32);
             label5.TabIndex = 14;
-            label5.Text = "Encryption Result";
+            label5.Text = "SHA256 in Hexadecimal";
             // 
             // txt_encrypt
             // 
             txt_encrypt.BorderStyle = BorderStyle.FixedSingle;
             txt_encrypt.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_encrypt.Location = new Point(61, 630);
+            txt_encrypt.Location = new Point(62, 580);
             txt_encrypt.Multiline = true;
             txt_encrypt.Name = "txt_encrypt";
-            txt_encrypt.Size = new Size(957, 190);
+            txt_encrypt.Size = new Size(957, 82);
             txt_encrypt.TabIndex = 13;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(62, 390);
+            label6.Name = "label6";
+            label6.Size = new Size(201, 32);
+            label6.TabIndex = 16;
+            label6.Text = "SHA256 in Bytes";
+            // 
+            // txt_encryptionInBytes
+            // 
+            txt_encryptionInBytes.BorderStyle = BorderStyle.FixedSingle;
+            txt_encryptionInBytes.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_encryptionInBytes.Location = new Point(61, 430);
+            txt_encryptionInBytes.Multiline = true;
+            txt_encryptionInBytes.Name = "txt_encryptionInBytes";
+            txt_encryptionInBytes.Size = new Size(957, 82);
+            txt_encryptionInBytes.TabIndex = 15;
+            // 
+            // txt_bytesOfUtf8
+            // 
+            txt_bytesOfUtf8.BorderStyle = BorderStyle.FixedSingle;
+            txt_bytesOfUtf8.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_bytesOfUtf8.Location = new Point(60, 279);
+            txt_bytesOfUtf8.Multiline = true;
+            txt_bytesOfUtf8.Name = "txt_bytesOfUtf8";
+            txt_bytesOfUtf8.Size = new Size(957, 79);
+            txt_bytesOfUtf8.TabIndex = 17;
+            // 
+            // txt_result
+            // 
+            txt_result.BorderStyle = BorderStyle.FixedSingle;
+            txt_result.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_result.Location = new Point(62, 739);
+            txt_result.Multiline = true;
+            txt_result.Name = "txt_result";
+            txt_result.Size = new Size(957, 82);
+            txt_result.TabIndex = 18;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(62, 693);
+            label7.Name = "label7";
+            label7.Size = new Size(84, 32);
+            label7.TabIndex = 19;
+            label7.Text = "Result";
             // 
             // Encrypt
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(204, 204, 204);
+            BackColor = Color.FromArgb(244, 242, 245);
             ClientSize = new Size(1069, 885);
             ControlBox = false;
+            Controls.Add(label7);
+            Controls.Add(txt_result);
+            Controls.Add(txt_bytesOfUtf8);
+            Controls.Add(label6);
+            Controls.Add(txt_encryptionInBytes);
             Controls.Add(label5);
             Controls.Add(txt_encrypt);
             Controls.Add(label4);
-            Controls.Add(txt_utf8);
             Controls.Add(btnTestLogin);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -178,9 +226,13 @@
         private Label label2;
         private Label label3;
         private Button btnTestLogin;
-        private TextBox txt_utf8;
         private Label label4;
         private Label label5;
         private TextBox txt_encrypt;
+        private Label label6;
+        private TextBox txt_encryptionInBytes;
+        private TextBox txt_bytesOfUtf8;
+        private TextBox txt_result;
+        private Label label7;
     }
 }

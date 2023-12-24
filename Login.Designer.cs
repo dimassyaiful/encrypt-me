@@ -129,6 +129,7 @@
             Controls.Add(panel1);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

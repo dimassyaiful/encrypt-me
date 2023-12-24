@@ -58,6 +58,11 @@ namespace Encrypt_Me
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
