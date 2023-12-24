@@ -11,6 +11,7 @@ namespace Encrypt_Me
             LoadPanel1();
             LoadPanel2();
             LoadPanel3();
+            LoadPanel4();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,6 +56,17 @@ namespace Encrypt_Me
             activeForm.Visible = true;
         }
 
+        public void LoadPanel4()
+        {
+            Form activeForm;
+            Login page = new Login();
+            activeForm = page;
+            activeForm.TopLevel = false;
+            activeForm.FormBorderStyle = FormBorderStyle.None;
+            panel4.Controls.Add(activeForm);
+            activeForm.Visible = true;
+        }
+
         public void togglePanel(int number)
         { 
             if (number.Equals(1))
@@ -62,19 +74,29 @@ namespace Encrypt_Me
                 panel1.Visible = true;
                 panel2.Visible = false;
                 panel3.Visible = false;
+                panel4.Visible = false;
             }
             else if (number.Equals(2))
             {
                 panel2.Visible = true;
                 panel1.Visible = false;
                 panel3.Visible = false;
+                panel4.Visible = false;
             }
             else if (number.Equals(3))
             {
                 panel3.Visible = true;
                 panel1.Visible = false;
                 panel2.Visible = false;
-            } 
+                panel4.Visible = false;
+            }
+            else if (number.Equals(4))
+            {
+                panel4.Visible = true;
+                panel3.Visible = false;
+                panel1.Visible = false;
+                panel2.Visible = false;
+            }
         }
 
 

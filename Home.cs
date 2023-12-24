@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿ 
+using System.Drawing.Drawing2D; 
 
 namespace Encrypt_Me
 {
@@ -74,8 +66,12 @@ namespace Encrypt_Me
 
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
-            mainForm.togglePanel(3);
+            mainForm.togglePanel(3); 
+        }
 
+        private void btnTestLogin_Click(object sender, EventArgs e)
+        {
+            mainForm.togglePanel(4);
         }
     }
 }

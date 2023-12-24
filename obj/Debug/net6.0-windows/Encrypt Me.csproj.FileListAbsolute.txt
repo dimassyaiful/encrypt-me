@@ -36,3 +36,4 @@ C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6
 C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.home.resources
 C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.Encrypt.resources
 C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.UserManagement.resources
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.Login.resources

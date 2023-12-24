@@ -98,6 +98,7 @@
             btnTestLogin.Text = "Test Login";
             btnTestLogin.TextAlign = ContentAlignment.BottomCenter;
             btnTestLogin.UseVisualStyleBackColor = false;
+            btnTestLogin.Click += btnTestLogin_Click;
             // 
             // btnUserManagement
             // 
