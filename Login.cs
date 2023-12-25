@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Encrypt_Me.model;
+using Encrypt_Me.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,8 @@ namespace Encrypt_Me
 {
     public partial class Login : Form
     {
+
+        Database db = new Database();
         public Login()
         {
             InitializeComponent();
@@ -56,12 +60,33 @@ namespace Encrypt_Me
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txt_username.Text;
+            string password = txt_password.Text;
+
+            // get data from database
+            string pwd = db.getUserPasswordByUsername(username);
+
+            // get hash inserted password
+            EncryptionService encryptionService = new EncryptionService();
+            string secretKey = encryptionService.getSecretKeyUserData();
+            ResultModel result = encryptionService.encryptToSHA256(password, secretKey);
+            string hashedPassword = result.getResult();
+
+            // compare
+            if(hashedPassword.Equals(pwd)) {
+                MessageBox.Show("Success Authenticated", "Success!");
+            }
+            else
+            {
+                MessageBox.Show("Please Check Username or Password","Failed!");
+
+            }
 
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 

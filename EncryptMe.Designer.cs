@@ -35,6 +35,7 @@
             panel3 = new Panel();
             panel2 = new Panel();
             panel4 = new Panel();
+            panel5 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -60,6 +61,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox3
             // 
@@ -100,11 +102,20 @@
             // panel4
             // 
             panel4.BackColor = Color.LightGray;
-            panel4.Location = new Point(94, -1);
+            panel4.Location = new Point(93, -1);
             panel4.Name = "panel4";
             panel4.Size = new Size(1091, 941);
             panel4.TabIndex = 4;
             panel4.Visible = false;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.LightGray;
+            panel5.Location = new Point(94, -1);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1091, 941);
+            panel5.TabIndex = 5;
+            panel5.Visible = false;
             // 
             // EncryptMe
             // 
@@ -113,6 +124,7 @@
             BackColor = Color.FromArgb(34, 50, 86);
             ClientSize = new Size(1182, 857);
             ControlBox = false;
+            Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
@@ -139,5 +151,6 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
+        private Panel panel5;
     }
 }

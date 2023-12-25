@@ -68,3 +68,4 @@ C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\bin\Debug\net6
 C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.csproj.AssemblyReference.cache
 C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt Me.csproj.CopyComplete
 C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\bin\Debug\net6.0-windows\config.db
+C:\Users\dimas\Documents\Kerjaan\Freelance\Encrypt Mee\encrypt-me\obj\Debug\net6.0-windows\Encrypt_Me.Information.resources

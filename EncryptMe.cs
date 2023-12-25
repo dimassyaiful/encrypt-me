@@ -5,7 +5,7 @@ using System.Windows.Forms;
 namespace Encrypt_Me
 {
     public partial class EncryptMe : Form
-    { 
+    {
         Database db = new Database();
         public EncryptMe()
         {
@@ -14,6 +14,7 @@ namespace Encrypt_Me
             LoadPanel2();
             LoadPanel3();
             LoadPanel4();
+            LoadPanel5();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,15 +69,26 @@ namespace Encrypt_Me
             panel4.Controls.Add(activeForm);
             activeForm.Visible = true;
         }
+        public void LoadPanel5()
+        {
+            Form activeForm;
+            Information page = new Information();
+            activeForm = page;
+            activeForm.TopLevel = false;
+            activeForm.FormBorderStyle = FormBorderStyle.None;
+            panel5.Controls.Add(activeForm);
+            activeForm.Visible = true;
+        }
 
         public void togglePanel(int number)
-        { 
+        {
             if (number.Equals(1))
             {
                 panel1.Visible = true;
                 panel2.Visible = false;
                 panel3.Visible = false;
                 panel4.Visible = false;
+                panel5.Visible = false;
             }
             else if (number.Equals(2))
             {
@@ -84,6 +96,7 @@ namespace Encrypt_Me
                 panel1.Visible = false;
                 panel3.Visible = false;
                 panel4.Visible = false;
+                panel5.Visible = false;
             }
             else if (number.Equals(3))
             {
@@ -91,10 +104,20 @@ namespace Encrypt_Me
                 panel1.Visible = false;
                 panel2.Visible = false;
                 panel4.Visible = false;
+                panel5.Visible = false;
             }
             else if (number.Equals(4))
             {
                 panel4.Visible = true;
+                panel3.Visible = false;
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel5.Visible = false;
+            }
+            else if (number.Equals(5))
+            {
+                panel5.Visible = true;
+                panel4.Visible = false;
                 panel3.Visible = false;
                 panel1.Visible = false;
                 panel2.Visible = false;
@@ -111,6 +134,11 @@ namespace Encrypt_Me
         {
             togglePanel(1);
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            togglePanel(5);
         }
     }
 

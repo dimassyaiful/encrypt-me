@@ -75,6 +75,28 @@ namespace Encrypt_Me.services
             }
         }
 
+        public string getUserPasswordByUsername(string username)
+        {
+
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText =
+            @"
+                SELECT password FROM user where username='"+ username + "'"
+            ;
+
+            string password = "";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    password = reader.GetString(0);
+                }
+            }
+            connection.Close();
+            return password;
+        }
+
 
         public void deleteUserData(string id)
         {
