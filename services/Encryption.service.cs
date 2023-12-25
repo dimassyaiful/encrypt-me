@@ -10,7 +10,7 @@ namespace Encrypt_Me.services
 {
     internal class EncryptionService
     {
-
+        String secretKeyForUserData = "eRMgmVN7lVsQwC6PomyWYyAwir7PXrEp11kd7WWMbtzX2qOoOu171p2rdUhCmyRK2FAMu6vukzTK2ORpSpTkhFpKirGswnWeOVE";
         public EncryptionService() {  }
 
         public ResultModel encryptToSHA256(string text, string secretKey)
@@ -53,5 +53,10 @@ namespace Encrypt_Me.services
             // 5. return result to show 
             return result; 
         } 
+
+        public string getSecretKeyUserData()
+        {
+            return secretKeyForUserData;
+        }
     }
 }

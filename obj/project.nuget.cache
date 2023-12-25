@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "aGZUDoRritjgfDLBWpBgHblQa7NMY6cje6MmOfmzieuJsSdrZUwCGRe09Ohm8IFeQ+H4jV8SznlLo/dsSJfa2A==",
+  "dgSpecHash": "+vTXo69tRos+KVZoXRJPmRHmLleSlbMdGZAgzEhC+LK1nooFJpY4xfqC7aVnmQ9qk8U509ucHgEtk9peY+BzkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dimas\\Documents\\Kerjaan\\Freelance\\Encrypt Mee\\encrypt-me\\Encrypt Me.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dimas\\.nuget\\packages\\microsoft.data.sqlite\\8.0.0\\microsoft.data.sqlite.8.0.0.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.6\\sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

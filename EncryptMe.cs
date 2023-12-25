@@ -1,3 +1,4 @@
+using Encrypt_Me.services;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
@@ -5,6 +6,7 @@ namespace Encrypt_Me
 {
     public partial class EncryptMe : Form
     { 
+        Database db = new Database();
         public EncryptMe()
         {
             InitializeComponent();

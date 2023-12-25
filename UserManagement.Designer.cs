@@ -39,6 +39,7 @@
             btn_update = new Button();
             btn_delete = new Button();
             dataGridView1 = new DataGridView();
+            txt_id = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(39, 137);
+            label1.Location = new Point(418, 134);
             label1.Name = "label1";
             label1.Size = new Size(128, 32);
             label1.TabIndex = 4;
@@ -56,10 +57,10 @@
             // 
             txt_username.BorderStyle = BorderStyle.FixedSingle;
             txt_username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_username.Location = new Point(39, 179);
+            txt_username.Location = new Point(418, 176);
             txt_username.Name = "txt_username";
             txt_username.Size = new Size(343, 45);
-            txt_username.TabIndex = 3;
+            txt_username.TabIndex = 2;
             // 
             // label3
             // 
@@ -75,7 +76,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(419, 137);
+            label2.Location = new Point(39, 249);
             label2.Name = "label2";
             label2.Size = new Size(122, 32);
             label2.TabIndex = 7;
@@ -85,16 +86,17 @@
             // 
             txt_password.BorderStyle = BorderStyle.FixedSingle;
             txt_password.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_password.Location = new Point(419, 179);
+            txt_password.Location = new Point(39, 291);
             txt_password.Name = "txt_password";
-            txt_password.Size = new Size(343, 45);
-            txt_password.TabIndex = 6;
+            txt_password.PasswordChar = '*';
+            txt_password.Size = new Size(722, 45);
+            txt_password.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(39, 256);
+            label4.Location = new Point(39, 134);
             label4.Name = "label4";
             label4.Size = new Size(81, 32);
             label4.TabIndex = 9;
@@ -104,10 +106,10 @@
             // 
             txt_nama.BorderStyle = BorderStyle.FixedSingle;
             txt_nama.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_nama.Location = new Point(39, 298);
+            txt_nama.Location = new Point(39, 176);
             txt_nama.Name = "txt_nama";
             txt_nama.Size = new Size(343, 45);
-            txt_nama.TabIndex = 8;
+            txt_nama.TabIndex = 1;
             // 
             // btn_add
             // 
@@ -122,9 +124,11 @@
             btn_add.Location = new Point(39, 371);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(173, 45);
-            btn_add.TabIndex = 11;
-            btn_add.Text = "add";
+            btn_add.TabIndex = 10;
+            btn_add.Text = "New";
             btn_add.UseVisualStyleBackColor = false;
+            btn_add.Visible = false;
+            btn_add.Click += btn_add_Click;
             // 
             // btn_update
             // 
@@ -139,9 +143,10 @@
             btn_update.Location = new Point(239, 371);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(173, 45);
-            btn_update.TabIndex = 12;
-            btn_update.Text = "update";
+            btn_update.TabIndex = 4;
+            btn_update.Text = "Add";
             btn_update.UseVisualStyleBackColor = false;
+            btn_update.Click += btn_update_Click;
             // 
             // btn_delete
             // 
@@ -156,19 +161,36 @@
             btn_delete.Location = new Point(441, 371);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(173, 45);
-            btn_delete.TabIndex = 13;
+            btn_delete.TabIndex = 5;
             btn_delete.Text = "delete";
             btn_delete.UseVisualStyleBackColor = false;
+            btn_delete.Click += btn_delete_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
             dataGridView1.Location = new Point(39, 444);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
             dataGridView1.Size = new Size(988, 342);
             dataGridView1.TabIndex = 14;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // txt_id
+            // 
+            txt_id.BorderStyle = BorderStyle.FixedSingle;
+            txt_id.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_id.Location = new Point(1076, 324);
+            txt_id.Name = "txt_id";
+            txt_id.Size = new Size(343, 45);
+            txt_id.TabIndex = 15;
             // 
             // UserManagement
             // 
@@ -176,6 +198,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1069, 885);
             ControlBox = false;
+            Controls.Add(txt_id);
             Controls.Add(dataGridView1);
             Controls.Add(btn_delete);
             Controls.Add(btn_update);
@@ -207,5 +230,6 @@
         private Button btn_update;
         private Button btn_delete;
         private DataGridView dataGridView1;
+        private TextBox txt_id;
     }
 }
