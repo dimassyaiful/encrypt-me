@@ -92,7 +92,7 @@ namespace Encrypt_Me
             txt_nama.Text = "";
             txt_password.Text = "";
             txt_username.Text = "";
-            txt_id.Text = ""; 
+            txt_id.Text = "";
             isNew = true;
             btn_update.Text = "Add";
             btn_add.Visible = false;
@@ -104,9 +104,10 @@ namespace Encrypt_Me
             string passwod = txt_password.Text;
             string username = txt_username.Text;
 
-            if(nama.Equals("") || passwod.Equals("") || passwod.Equals(""))
+            if (nama.Equals("") || passwod.Equals("") || passwod.Equals(""))
             {
                 MessageBox.Show("Field Cannot be Empty");
+                return;
             }
 
             if (isNew.Equals(true))
@@ -115,7 +116,7 @@ namespace Encrypt_Me
             }
             else
             {
-                db.updateUserData(selectedId,nama, username, passwod);
+                db.updateUserData(selectedId, nama, username, passwod);
             }
             populateUserData();
 
@@ -132,6 +133,13 @@ namespace Encrypt_Me
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (selectedId == null) return;
+
+            DialogResult result = MessageBox.Show("Yakin untuk menghapus data ini?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
             db.deleteUserData(selectedId);
             populateUserData();
             txt_nama.Text = "";
@@ -148,6 +156,11 @@ namespace Encrypt_Me
             isNew = false;
             btn_update.Text = "Update";
             btn_add.Visible = true;
+        }
+
+        private void UserManagement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

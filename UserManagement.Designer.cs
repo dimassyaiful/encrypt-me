@@ -212,6 +212,7 @@
             Controls.Add(txt_username);
             Name = "UserManagement";
             Text = "User Management";
+            Load += UserManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

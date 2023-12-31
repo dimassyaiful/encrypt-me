@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Collections;
+using System.Text;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Encrypt_Me.model {
     internal class ResultModel
@@ -16,6 +18,11 @@ namespace Encrypt_Me.model {
         string hashedInHexaDecimalString;
         string result;
 
+
+        string binaryBeforeHashString;
+        string binaryAfterHashString;
+        string totalBit;
+
         public ResultModel(string textToEncrypt)
         {
             this.textToEncrypt =  textToEncrypt; 
@@ -24,6 +31,31 @@ namespace Encrypt_Me.model {
         public void setUTF8(string utf8)
         { 
             this.UTF8InString = utf8;
+        }
+
+        public void setBinaryBeforeHashString(string txt)
+        {
+            String res = "";
+            foreach (char character in txt)
+            {
+                int decimalValue = (int)character;
+                string binaryValue = Convert.ToString(decimalValue, 2).PadLeft(8, '0');
+                res += binaryValue+ "  ";
+            }
+            this.binaryBeforeHashString = res;
+        }
+
+        public void setBinaryAfterHashString(byte[] txt)
+        {
+            string binaryString = string.Join(" ", txt.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')));
+            this.binaryAfterHashString = binaryString;
+        }
+        public void setTotalBit(string txt)
+        {
+            byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(txt);
+            int totalBits = byteArray.Length * 8;
+            this.totalBit = totalBits.ToString();
+
         }
 
         public void setUTF8InBytes(byte[] utf8InBytes)
@@ -85,6 +117,21 @@ namespace Encrypt_Me.model {
         public string getResult()
         {
             return this.result;
+        }
+
+        public string getBinaryBeforeHash()
+        {
+            return this.binaryBeforeHashString;
+        }
+
+        public string getBinaryAfterHash()
+        {
+            return this.binaryAfterHashString;
+        }
+
+        public string getTotalBit()
+        {
+            return this.totalBit;
         }
 
     }

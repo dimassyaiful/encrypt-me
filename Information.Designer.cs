@@ -28,34 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Information));
+            pictureBox1 = new PictureBox();
             label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(74, 143);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1001, 615);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(361, 102);
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(333, 60);
             label1.Name = "label1";
-            label1.Size = new Size(366, 54);
-            label1.TabIndex = 0;
-            label1.Text = "Some Context Here";
+            label1.Size = new Size(432, 65);
+            label1.TabIndex = 1;
+            label1.Text = "Algoritma SHA 256";
             // 
             // Information
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1120, 1025);
             ControlBox = false;
             Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Name = "Information";
             Text = "Information";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private PictureBox pictureBox1;
         private Label label1;
     }
 }

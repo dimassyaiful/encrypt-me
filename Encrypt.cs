@@ -51,13 +51,19 @@ namespace Encrypt_Me
         private void btnTestLogin_Click(object sender, EventArgs e)
         {
             string text = txt_text.Text;
+            if (text.Equals(""))
+            {
+                MessageBox.Show("Cannot Encrypt null text");
+                return;
+            }
             string secretKey = txt_secretKey.Text;
             EncryptionService service = new EncryptionService();
             ResultModel result = service.encryptToSHA256(text, secretKey);  
-            txt_bytesOfUtf8.Text = result.getUTF8Bytes();
-            txt_encryptionInBytes.Text = result.getHashedInBytes();
+            txt_bytesOfUtf8.Text = result.getBinaryBeforeHash();  // in binaries
+            txt_encryptionInBytes.Text = result.getBinaryAfterHash(); // in binaries
             txt_encrypt.Text = result.getHashedString();
             txt_result.Text = result.getResult();
+            txt_totalBit.Text = result.getTotalBit() + " bit"; 
         }
     }
 }

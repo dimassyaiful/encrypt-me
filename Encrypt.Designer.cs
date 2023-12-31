@@ -42,6 +42,7 @@
             txt_bytesOfUtf8 = new TextBox();
             txt_result = new TextBox();
             label7 = new Label();
+            txt_totalBit = new Label();
             SuspendLayout();
             // 
             // txt_text
@@ -116,9 +117,9 @@
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(61, 237);
             label4.Name = "label4";
-            label4.Size = new Size(296, 32);
+            label4.Size = new Size(173, 32);
             label4.TabIndex = 12;
-            label4.Text = "UTF8 Converted to Bytes";
+            label4.Text = "Text to Binary";
             // 
             // label5
             // 
@@ -146,9 +147,9 @@
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(62, 390);
             label6.Name = "label6";
-            label6.Size = new Size(201, 32);
+            label6.Size = new Size(214, 32);
             label6.TabIndex = 16;
-            label6.Text = "SHA256 in Bytes";
+            label6.Text = "SHA256 in Binary";
             // 
             // txt_encryptionInBytes
             // 
@@ -190,6 +191,15 @@
             label7.TabIndex = 19;
             label7.Text = "Result";
             // 
+            // txt_totalBit
+            // 
+            txt_totalBit.AutoSize = true;
+            txt_totalBit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_totalBit.Location = new Point(972, 237);
+            txt_totalBit.Name = "txt_totalBit";
+            txt_totalBit.Size = new Size(0, 32);
+            txt_totalBit.TabIndex = 21;
+            // 
             // Encrypt
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -197,6 +207,7 @@
             BackColor = Color.FromArgb(244, 242, 245);
             ClientSize = new Size(1069, 885);
             ControlBox = false;
+            Controls.Add(txt_totalBit);
             Controls.Add(label7);
             Controls.Add(txt_result);
             Controls.Add(txt_bytesOfUtf8);
@@ -234,5 +245,6 @@
         private TextBox txt_bytesOfUtf8;
         private TextBox txt_result;
         private Label label7;
+        private Label txt_totalBit;
     }
 }

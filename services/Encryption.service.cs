@@ -51,6 +51,9 @@ namespace Encrypt_Me.services
             result.setEncrypted256Data(bytes);
              
             // 5. return result to show 
+            result.setBinaryBeforeHashString(textToEncrypt);
+            result.setBinaryAfterHashString(bytes);
+            result.setTotalBit(textToEncrypt);
             return result; 
         } 
 
