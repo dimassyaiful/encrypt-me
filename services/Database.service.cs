@@ -128,8 +128,7 @@ namespace Encrypt_Me.services
 
                 // encrpt password
                 EncryptionService encryptionService = new EncryptionService();
-                string secretKey = encryptionService.getSecretKeyUserData();
-                ResultModel result = encryptionService.encryptToSHA256(password, secretKey);
+                ResultModel result = encryptionService.encryptToSHA256(password);
                 string hashedPasssword = result.getResult();
 
                 // Update data in the table
@@ -165,8 +164,7 @@ namespace Encrypt_Me.services
 
                 // encrpt password
                 EncryptionService encryptionService = new EncryptionService();
-                string secretKey = encryptionService.getSecretKeyUserData();
-                ResultModel result = encryptionService.encryptToSHA256(password, secretKey);
+                ResultModel result = encryptionService.encryptToSHA256(password);
                 string hashedPasssword = result.getResult();
 
                 // Update data in the table

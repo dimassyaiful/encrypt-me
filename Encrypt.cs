@@ -56,9 +56,8 @@ namespace Encrypt_Me
                 MessageBox.Show("Cannot Encrypt null text");
                 return;
             }
-            string secretKey = txt_secretKey.Text;
             EncryptionService service = new EncryptionService();
-            ResultModel result = service.encryptToSHA256(text, secretKey);  
+            ResultModel result = service.encryptToSHA256(text);  
             txt_bytesOfUtf8.Text = result.getBinaryBeforeHash();  // in binaries
             txt_encryptionInBytes.Text = result.getBinaryAfterHash(); // in binaries
             txt_encrypt.Text = result.getHashedString();

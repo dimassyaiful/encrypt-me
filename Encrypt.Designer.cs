@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             txt_text = new TextBox();
-            txt_secretKey = new TextBox();
             label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             btnTestLogin = new Button();
             label4 = new Label();
@@ -51,17 +49,8 @@
             txt_text.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             txt_text.Location = new Point(62, 161);
             txt_text.Name = "txt_text";
-            txt_text.Size = new Size(343, 45);
+            txt_text.Size = new Size(763, 45);
             txt_text.TabIndex = 0;
-            // 
-            // txt_secretKey
-            // 
-            txt_secretKey.BorderStyle = BorderStyle.FixedSingle;
-            txt_secretKey.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_secretKey.Location = new Point(426, 160);
-            txt_secretKey.Name = "txt_secretKey";
-            txt_secretKey.Size = new Size(400, 45);
-            txt_secretKey.TabIndex = 1;
             // 
             // label1
             // 
@@ -72,16 +61,6 @@
             label1.Size = new Size(131, 32);
             label1.TabIndex = 2;
             label1.Text = "Some Text";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(426, 118);
-            label2.Name = "label2";
-            label2.Size = new Size(133, 32);
-            label2.TabIndex = 3;
-            label2.Text = "Secret Key";
             // 
             // label3
             // 
@@ -218,9 +197,7 @@
             Controls.Add(label4);
             Controls.Add(btnTestLogin);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(txt_secretKey);
             Controls.Add(txt_text);
             Name = "Encrypt";
             Text = "Encrypt";
@@ -232,9 +209,7 @@
         #endregion
 
         private TextBox txt_text;
-        private TextBox txt_secretKey;
         private Label label1;
-        private Label label2;
         private Label label3;
         private Button btnTestLogin;
         private Label label4;

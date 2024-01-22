@@ -68,8 +68,7 @@ namespace Encrypt_Me
 
             // get hash inserted password
             EncryptionService encryptionService = new EncryptionService();
-            string secretKey = encryptionService.getSecretKeyUserData();
-            ResultModel result = encryptionService.encryptToSHA256(password, secretKey);
+            ResultModel result = encryptionService.encryptToSHA256(password);
             string hashedPassword = result.getResult();
 
             // compare

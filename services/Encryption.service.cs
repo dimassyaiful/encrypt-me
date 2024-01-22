@@ -10,10 +10,9 @@ namespace Encrypt_Me.services
 {
     internal class EncryptionService
     {
-        String secretKeyForUserData = "eRMgmVN7lVsQwC6PomyWYyAwir7PXrEp11kd7WWMbtzX2qOoOu171p2rdUhCmyRK2FAMu6vukzTK2ORpSpTkhFpKirGswnWeOVE";
-        public EncryptionService() {  }
+         public EncryptionService() {  }
 
-        public ResultModel encryptToSHA256(string text, string secretKey)
+        public ResultModel encryptToSHA256(string text)
         {
             /*
                 Hashing text to SHA256
@@ -29,7 +28,7 @@ namespace Encrypt_Me.services
 
 
             // 1. Combine text with secretkey
-            string textToEncrypt = text + secretKey;
+            string textToEncrypt = text;
             Debug.WriteLine(textToEncrypt);
             ResultModel result = new ResultModel(textToEncrypt);
 
@@ -57,9 +56,5 @@ namespace Encrypt_Me.services
             return result; 
         } 
 
-        public string getSecretKeyUserData()
-        {
-            return secretKeyForUserData;
-        }
     }
 }
