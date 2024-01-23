@@ -7,6 +7,8 @@ namespace Encrypt_Me.services
 {
     internal class Database
     {
+        // DATABASE FOR USER MANAGEMENT
+
         string urlDB = "";
         SqliteConnection connection = null;
         public Database()
@@ -45,7 +47,8 @@ namespace Encrypt_Me.services
         {
             try
             { 
-                string connectionString = $"Data Source={this.urlDB};";  
+                string connectionString = $"Data Source={this.urlDB};";   
+                Debug.WriteLine(this.urlDB);
                 connection = new SqliteConnection(connectionString); 
             }
             catch (Exception ex)
@@ -127,9 +130,8 @@ namespace Encrypt_Me.services
                 connection.Open();
 
                 // encrpt password
-                EncryptionService encryptionService = new EncryptionService();
-                string secretKey = encryptionService.getSecretKeyUserData();
-                ResultModel result = encryptionService.encryptToSHA256(password, secretKey);
+                EncryptionService encryptionService = new EncryptionService(); 
+                ResultModel result = encryptionService.encryptToSHA256(password);
                 string hashedPasssword = result.getResult();
 
                 // Update data in the table
@@ -164,9 +166,8 @@ namespace Encrypt_Me.services
                 connection.Open();
 
                 // encrpt password
-                EncryptionService encryptionService = new EncryptionService();
-                string secretKey = encryptionService.getSecretKeyUserData();
-                ResultModel result = encryptionService.encryptToSHA256(password, secretKey);
+                EncryptionService encryptionService = new EncryptionService(); 
+                ResultModel result = encryptionService.encryptToSHA256(password);
                 string hashedPasssword = result.getResult();
 
                 // Update data in the table

@@ -76,10 +76,10 @@ namespace Encrypt_Me
                 var selectedData = dataGridView1.Rows[e.RowIndex];
 
                 // Display the data in the TextBox
-                txt_nama.Text = selectedData.Cells[0].Value?.ToString();
+                txt_nama.Text = selectedData.Cells[1].Value?.ToString();
                 // txt_password.Text = selectedData.Cells[2].Value?.ToString();
-                txt_username.Text = selectedData.Cells[1].Value?.ToString();
-                selectedId = selectedData.Cells[3].Value?.ToString();
+                txt_username.Text = selectedData.Cells[2].Value?.ToString();
+                selectedId = selectedData.Cells[0].Value?.ToString();
                 isNew = false;
                 btn_update.Text = "Update";
                 btn_add.Visible = true;

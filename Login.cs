@@ -67,9 +67,8 @@ namespace Encrypt_Me
             string pwd = db.getUserPasswordByUsername(username);
 
             // get hash inserted password
-            EncryptionService encryptionService = new EncryptionService();
-            string secretKey = encryptionService.getSecretKeyUserData();
-            ResultModel result = encryptionService.encryptToSHA256(password, secretKey);
+            EncryptionService encryptionService = new EncryptionService(); 
+            ResultModel result = encryptionService.encryptToSHA256(password);
             string hashedPassword = result.getResult();
 
             // compare

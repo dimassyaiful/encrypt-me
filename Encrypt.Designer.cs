@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             txt_text = new TextBox();
-            txt_secretKey = new TextBox();
             label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             btnTestLogin = new Button();
             label4 = new Label();
@@ -43,6 +41,9 @@
             txt_result = new TextBox();
             label7 = new Label();
             txt_totalBit = new Label();
+            dataGridView2 = new DataGridView();
+            label8 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // txt_text
@@ -51,17 +52,8 @@
             txt_text.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             txt_text.Location = new Point(62, 161);
             txt_text.Name = "txt_text";
-            txt_text.Size = new Size(343, 45);
+            txt_text.Size = new Size(759, 45);
             txt_text.TabIndex = 0;
-            // 
-            // txt_secretKey
-            // 
-            txt_secretKey.BorderStyle = BorderStyle.FixedSingle;
-            txt_secretKey.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_secretKey.Location = new Point(426, 160);
-            txt_secretKey.Name = "txt_secretKey";
-            txt_secretKey.Size = new Size(400, 45);
-            txt_secretKey.TabIndex = 1;
             // 
             // label1
             // 
@@ -72,16 +64,6 @@
             label1.Size = new Size(131, 32);
             label1.TabIndex = 2;
             label1.Text = "Some Text";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(426, 118);
-            label2.Name = "label2";
-            label2.Size = new Size(133, 32);
-            label2.TabIndex = 3;
-            label2.Text = "Secret Key";
             // 
             // label3
             // 
@@ -200,13 +182,40 @@
             txt_totalBit.Size = new Size(0, 32);
             txt_totalBit.TabIndex = 21;
             // 
+            // dataGridView2
+            // 
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.AllowUserToOrderColumns = true;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.EditMode = DataGridViewEditMode.EditOnEnter;
+            dataGridView2.Location = new Point(62, 904);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.ReadOnly = true;
+            dataGridView2.RowHeadersWidth = 62;
+            dataGridView2.RowTemplate.Height = 33;
+            dataGridView2.Size = new Size(959, 460);
+            dataGridView2.TabIndex = 22;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(62, 856);
+            label8.Name = "label8";
+            label8.Size = new Size(188, 32);
+            label8.TabIndex = 23;
+            label8.Text = "Encryption Log";
+            // 
             // Encrypt
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 242, 245);
-            ClientSize = new Size(1069, 885);
+            ClientSize = new Size(1069, 1523);
             ControlBox = false;
+            Controls.Add(label8);
+            Controls.Add(dataGridView2);
             Controls.Add(txt_totalBit);
             Controls.Add(label7);
             Controls.Add(txt_result);
@@ -218,13 +227,12 @@
             Controls.Add(label4);
             Controls.Add(btnTestLogin);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(txt_secretKey);
             Controls.Add(txt_text);
             Name = "Encrypt";
             Text = "Encrypt";
             Load += Form3_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -232,9 +240,7 @@
         #endregion
 
         private TextBox txt_text;
-        private TextBox txt_secretKey;
         private Label label1;
-        private Label label2;
         private Label label3;
         private Button btnTestLogin;
         private Label label4;
@@ -246,5 +252,7 @@
         private TextBox txt_result;
         private Label label7;
         private Label txt_totalBit;
+        private DataGridView dataGridView2;
+        private Label label8;
     }
 }

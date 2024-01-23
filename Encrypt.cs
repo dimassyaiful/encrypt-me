@@ -1,15 +1,19 @@
 ﻿
 using Encrypt_Me.model;
 using Encrypt_Me.services;
+using System.Data;
 using System.Drawing.Drawing2D; 
 
 namespace Encrypt_Me
 {
     public partial class Encrypt : Form
     {
+        DatabaseEncrypt db = new DatabaseEncrypt();
         public Encrypt()
         {
             InitializeComponent();
+            DatabaseEncrypt db = new DatabaseEncrypt();
+            populateUserData();
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -55,15 +59,32 @@ namespace Encrypt_Me
             {
                 MessageBox.Show("Cannot Encrypt null text");
                 return;
-            }
-            string secretKey = txt_secretKey.Text;
+            } 
             EncryptionService service = new EncryptionService();
-            ResultModel result = service.encryptToSHA256(text, secretKey);  
+            ResultModel result = service.encryptToSHA256(text);  
             txt_bytesOfUtf8.Text = result.getBinaryBeforeHash();  // in binaries
             txt_encryptionInBytes.Text = result.getBinaryAfterHash(); // in binaries
             txt_encrypt.Text = result.getHashedString();
             txt_result.Text = result.getResult();
-            txt_totalBit.Text = result.getTotalBit() + " bit"; 
+            txt_totalBit.Text = result.getTotalBit() + " bit";
+            db.insertData(text, result);
+            populateUserData();
+        }
+
+        private void populateUserData()
+        {
+            DataTable dataTable = db.getData();
+            // Check if data is retrieved successfully
+            if (dataTable != null)
+            {
+                // Bind the DataTable to the DataGridView
+                dataGridView2.DataSource = dataTable;
+            }
+            else
+            {
+                MessageBox.Show("Error fetching data from the database.");
+            }
+
         }
     }
 }

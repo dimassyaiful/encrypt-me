@@ -43,6 +43,7 @@ namespace Encrypt_Me
             activeForm = page;
             activeForm.TopLevel = false;
             activeForm.FormBorderStyle = FormBorderStyle.None;
+            panel2.AutoScroll = true;
             panel2.Controls.Add(activeForm);
             activeForm.Visible = true;
         }
